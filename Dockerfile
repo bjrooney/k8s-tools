@@ -14,4 +14,5 @@ RUN cd "$(mktemp -d)" && curl -LO https://github.com/kubernetes-sigs/krew/releas
 RUN cd "$(mktemp -d)" && curl -LO https://github.com/derailed/k9s/releases/download/v0.27.4/k9s_Linux_amd64.tar.gz && tar zxvf k9s_Linux_amd64.tar.gz && mv k9s /usr/bin
 RUN cd "$(mktemp -d)" && curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && unzip awscliv2.zip && ./aws/install 
 # RUN "az aks install-cli"
+RUN cd "$(mktemp -d)" && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 ENTRYPOINT ["tail", "-f", "/dev/null"]
