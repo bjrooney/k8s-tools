@@ -12,4 +12,5 @@ RUN cd "$(mktemp -d)" && curl -fsSL -o get_helm.sh https://raw.githubusercontent
 RUN cd "$(mktemp -d)" && curl -LO https://github.com/kubernetes-sigs/krew/releases/download/v0.4.4/krew-linux_amd64.tar.gz && tar zxvf krew-linux_amd64.tar.gz &&  ./krew-linux_amd64 install krew && kubectl krew update && kubectl krew install kc ns ctx
 RUN cd "$(mktemp -d)" && curl -LO https://github.com/derailed/k9s/releases/download/v0.27.4/k9s_Linux_amd64.tar.gz && tar zxvf k9s_Linux_amd64.tar.gz && mv k9s /usr/bin
 RUN cd "$(mktemp -d)" && curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && unzip awscliv2.zip && ./aws/install 
+RUN "az aks install-cli"
 ENTRYPOINT ["tail", "-f", "/dev/null"]
