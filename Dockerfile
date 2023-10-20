@@ -1,4 +1,4 @@
-FROM debian:12.1-slim
+FROM debian:stable-slim
 # To make it easier for build and release pipelines to run apt-get,
 ENV DEBIAN_FRONTEND=noninteractive
 ENV VENDIR_VERSION=0.33.1
