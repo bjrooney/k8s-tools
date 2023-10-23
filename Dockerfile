@@ -1,4 +1,4 @@
-FROM debian:bookworm-20231009-slim
+FROM debian:unstable-slim
 # To make it easier for build and release pipelines to run apt-get,
 ENV DEBIAN_FRONTEND=noninteractive
 ENV VENDIR_VERSION=0.33.1
