@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM debian:12.11
 # To make it easier for build and release pipelines to run apt-get,
 ENV DEBIAN_FRONTEND=noninteractive
 ENV VENDIR_VERSION=0.42.0
